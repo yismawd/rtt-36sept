@@ -130,10 +130,22 @@ def save_data():
 
 # load movie - pull previews database file into this program
 
+# define load_data function
+    # ask user where to import file from
+    # try to open the file
+        # save file contents to temp database in app.
+    #print success message
+def load_data():
+    filename = input('Enter the filename to load: ')
 
-# Error handling
+    with open(f'data/{filename}.json', 'r') as f:
+        data = json.load(f)
 
-# Data validation
+        global movie_db
+        movie_db = data
+
+    print('🎉 Data loaded successfully')
+
 
 # We have to find a way, to repeatly ask the user what action they want to take
 while True:
