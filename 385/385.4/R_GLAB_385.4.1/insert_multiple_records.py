@@ -19,6 +19,33 @@ def connect():
         # Creates a cursor object that allows SQL actions to the MySQL server engine
         cursor = conn.cursor()
 
+        records_to_insert = [
+            (4, 'HP Pavilion Power', 1999, '2019-01-11'),
+            (5, 'MSI WS75 9TL-496', 5799, '2019-02-27'),
+            (6, 'Microsoft Surface', 2330, '2019-07-23')
+        ]
+
+
+        # Create a SQL Query we want to run
+        query = '''
+            INSERT INTO laptop (Id, Name, Price, Purchase_date)
+            VALUES (%s, %s, %s, %s)
+        '''
+
+        # Executes query in SQL engine/server
+        cursor.executemany(query, records_to_insert)
+        print('✅ Query Executed.')
+
+        conn.commit()
+        print('✅ Transaction Commited.')
+
+        print(f'✅ {cursor.rowcount}: Record(s) inserted successfully.')
+
+  
+
+        # Creates a cursor object that allows SQL actions to the MySQL server engine
+        cursor = conn.cursor()
+
         # Create a SQL Query we want to run
         query = '''
             CREATE TABLE laptop (

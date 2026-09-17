@@ -1,6 +1,7 @@
 # To connect to MySQL, we need mysql-connector-python
 import mysql.connector as mydbconnection # using an alias for clarity
 from mysql.connector import Error # Error function for special MySQL errors
+from dotenv import 
 
 def connect():
     conn = None
