@@ -11,10 +11,13 @@ median = np.median(temperature_data)
 stDev = np.std(temperature_data)
 
 # Print mean, median, standard deviation in an organized manner
-print(f'Mean: {}')
+print(f"Mean: {mean:.2f}°C")
+print(f"Median: {median:.2f}°C")
+print(f"Std: {stdev:.2f}°C")
 
 # Find days with temperatures above a certain threshold (e.g., 30°C) save in variable 'hot_days'
 
+print(f"Hot Days (>30°C): {hot_days}")
 
 # Count the number of hot days
 
