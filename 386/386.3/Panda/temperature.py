@@ -6,10 +6,12 @@ temperature_data = np.array([22.3, 23.1, 24.5, 25.8, 23.6, 26.7, 27.9, 29.2, 30.
 
 
 # Calculate the mean, median, and standard deviation
-
+mean = np.mean(temperature_data)
+median = np.median(temperature_data)
+stDev = np.std(temperature_data)
 
 # Print mean, median, standard deviation in an organized manner
-
+print(f'Mean: {}')
 
 # Find days with temperatures above a certain threshold (e.g., 30°C) save in variable 'hot_days'
 
@@ -21,7 +23,8 @@ temperature_data = np.array([22.3, 23.1, 24.5, 25.8, 23.6, 26.7, 27.9, 29.2, 30.
 
 
 # Convert all temperatures to Fahrenheit = (temp * 9/5) +32
-
+temperature_fahrenheit = (temperature_data * 9/5) + 32
+print(temperature_fahrenheit) 
 
 ## BONUS ##
 # Calculate the total cooling degree days for the year
@@ -29,5 +32,5 @@ temperature_data = np.array([22.3, 23.1, 24.5, 25.8, 23.6, 26.7, 27.9, 29.2, 30.
 # Amount of degrees to cool. to bring back to base temperature
 # In this example, we'll consider a base temperature of 20°C.
 base_temperature = 20
-
+cooling_degrees = np.sum(np.maximum)
 # Print cooling degree days an organized manner
